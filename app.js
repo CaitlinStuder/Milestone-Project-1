@@ -10,4 +10,9 @@ for (let i=1; i<=16; i++) {
     hole.classList.add('hole')
     holesDiv.appendChild(hole)
  
+    let pile = document.createElement('img')
+    pile.classList.add('pile')
+    pile.src='./assets/dirtpile.png'
+    hole.appendChild(pile)
+ 
 }
