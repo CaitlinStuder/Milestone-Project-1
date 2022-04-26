@@ -3,7 +3,8 @@ const score = document.querySelector('#score')
 const time = document.querySelector('#time-left')
 const startButton = document.querySelector('#start-button')
 
-
+let timeLeft
+let pScore = 0
 
 for (let i=1; i<=16; i++) {
     let hole = document.createElement('div')
@@ -21,3 +22,25 @@ for (let i=1; i<=16; i++) {
     mole.setAttribute('name', 'mole')
     hole.appendChild(mole)
 }
+
+startButton.addEventListener('click',() => {
+ 
+    timeLeft = 30
+    pScore = 0
+    score.textContent = pScore
+    time.textContent = timeLeft
+   
+    let timer = setInterval(() => {
+ 
+        time.textContent = timeLeft
+        if(timeLeft === 0) {
+            clearInterval(timer)
+            alert(`Game Over. Your final score is ${pScore}. Refresh browser to play again.`)
+        } else {
+            timeLeft--
+        }
+ 
+    }, 1500)
+   
+   
+})
