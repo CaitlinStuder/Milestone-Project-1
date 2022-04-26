@@ -23,6 +23,14 @@ for (let i=1; i<=16; i++) {
     hole.appendChild(mole)
 }
 
+window.addEventListener('click', (e) => {
+    if(e.target.name === 'mole') {
+        pScore = pScore + 5
+        score.textContent = pScore
+    }
+})
+
+
 startButton.addEventListener('click',() => {
  
     timeLeft = 30
@@ -39,8 +47,19 @@ startButton.addEventListener('click',() => {
         } else {
             timeLeft--
         }
+
+        const allMoles = document.querySelectorAll('.mole')
+        let chooseMole = Math.floor(Math.random() * allMoles.length)
+        allMoles[chooseMole].style.pointerEvents = 'all'
+        allMoles[chooseMole].style.animation = 'faceup 1s ease'
+        allMoles[chooseMole].addEventListener('animationEnd', () => {
+            allMoles[chooseMole].style.pointerEvents = 'all'
+            allMoles[chooseMole].addEventListener('animationEnd', () => {
+                allMoles[chooseMole].style.pointerEvents = 'none'
+            })
+        })
+
  
     }, 1500)
-   
-   
+
 })
