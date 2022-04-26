@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ 
+body {
+    min-height:100vh;
+    overflow: hidden;
+    background-color: bisque;
+}
+ 
+.holes {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    gap: 10px;
+    top: 50%;
+    left: 50%;
+    width: 670px;
+    height: 630px;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    box-shadow: black 20px 10px 50px;
+    background: green;
+}
