@@ -25,6 +25,35 @@ body {
     background: green;
 }
 
+.hole {
+    position: relative;
+    height: 150px;
+    width: 160px;
+    --border: 1px solid black;
+    overflow: hidden;
+    pointer-events: none;
+}
+ 
+.pile {
+    position: absolute;
+    bottom: -85px;
+    left: -20px;
+    width: 210px;
+    object-fit: cover;
+    pointer-events: none;
+}
+ 
+.mole {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 155px;
+    object-fit: contain;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
 #start-button {
     position: absolute;
     left: 10.5%;
