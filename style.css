@@ -53,9 +53,38 @@ body {
     pointer-events: none;
 }
 
+#title {
+    font-size: 2.5rem;
+    color: rgb(103, 70, 33);
+    position: absolute;
+    left: 4.5%;
+    top: 2%;
+}
+
 
 #start-button {
     position: absolute;
     left: 10.5%;
     top: 25%;
 }
+
+.score-table {
+    font-size: 1.5rem;
+    height: 100px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: darkgreen;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    transform: translate(-5%, -5%);
+    border: 1px solid darkgreen;
+}
+ 
+.score-table div {
+    display: flex;
+    justify-content: space-between;
+}
+
