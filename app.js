@@ -15,4 +15,9 @@ for (let i=1; i<=16; i++) {
     pile.src='./assets/dirtpile.png'
     hole.appendChild(pile)
  
+    let mole = document.createElement('img')
+    mole.classList.add('mole')
+    mole.src='./assets/mole.png'
+    mole.setAttribute('name', 'mole')
+    hole.appendChild(mole)
 }
